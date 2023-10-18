@@ -38,4 +38,24 @@ public class StudentService implements IStudentService {
     public List<Student> searchByName(String name) {
        return studentRepository.searchByName(name);
     }
+
+    @Override
+    public List<Student> sortByNameDesc() {
+        return studentRepository.sortByNameDesc();
+    }
+
+    @Override
+    public List<Student> sortByNameAcs() {
+        return studentRepository.sortByNameAsc();
+    }
+
+    @Override
+    public List<Student> sortByAgeDesc() {
+        return studentRepository.sortByAgeDesc();
+    }
+
+    @Override
+    public List<Student> sortByAgeAcs() {
+        return studentRepository.sortByAgeDesc();
+    }
 }

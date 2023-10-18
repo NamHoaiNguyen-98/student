@@ -48,4 +48,25 @@ public class StudentController {
         return new ResponseEntity<>(students, HttpStatus.OK);
     }
 
+    @GetMapping("/sortNameDesc")
+    public ResponseEntity<List<Student>> sortByNameDesc() {
+       List<Student> students =  studentService.sortByNameDesc();
+        return new ResponseEntity<>(students, HttpStatus.OK);
+    }
+    @GetMapping("/sortNameAcs")
+    public ResponseEntity<List<Student>> sortByNameAcs() {
+        List<Student> students =  studentService.sortByNameAcs();
+        return new ResponseEntity<>(students, HttpStatus.OK);
+    }
+    @GetMapping("/sortAgeDesc")
+    public ResponseEntity<List<Student>> sortByAgeDesc() {
+        List<Student> students =  studentService.sortByAgeDesc();
+        return new ResponseEntity<>(students, HttpStatus.OK);
+    }
+    @GetMapping("/sortAgeAcs")
+    public ResponseEntity<List<Student>> sortByAgeAcs() {
+        List<Student> students =  studentService.sortByAgeAcs();
+        return new ResponseEntity<>(students, HttpStatus.OK);
+    }
+
 }

@@ -11,6 +11,14 @@ import java.util.List;
 public interface StudentRepository extends JpaRepository<Student, Long> {
     @Query(value = "SELECT * FROM student s where s.name like %?%", nativeQuery = true)
     List<Student> searchByName(String name);
+    @Query(value = "SELECT * FROM student s order by s.name desc ", nativeQuery = true)
+    List<Student> sortByNameDesc();
+    @Query(value = "SELECT * FROM student s order by s.name asc ", nativeQuery = true)
+    List<Student> sortByNameAsc();
+    @Query(value = "SELECT * FROM student s order by s.age desc ", nativeQuery = true)
+    List<Student> sortByAgeDesc();
+    @Query(value = "SELECT * FROM student s order by s.age asc ", nativeQuery = true)
+    List<Student> sortByAgeAsc();
 
 
 
